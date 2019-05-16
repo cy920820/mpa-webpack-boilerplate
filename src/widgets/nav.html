@@ -1,0 +1,16 @@
+<nav>
+  <%
+    [
+      { title: '首页', href: 'index.html' },
+      { title: '关于', href: 'about.html' }
+    ].forEach(function(nav, index) {
+  %>
+
+  <%-
+    '<a ' + (index === active ? 'class="active"' : '') + ' href="'+ nav.href +'">' + nav.title + '</a>'
+  %>
+
+  <%
+    })
+  %>
+</nav>

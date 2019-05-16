@@ -1,0 +1,19 @@
+<%-
+  require('widgets/header.html')({
+    title: '主页',
+    links: [
+      require('css/pages/index.styl')
+    ],
+    htmlWebpackPlugin: htmlWebpackPlugin
+  })
+%>
+
+<div class="container">
+  <%- require('widgets/nav.html')({ active: 0 }) %>
+  <div class="content">
+    <p class="index-title">首页</p>
+    <img src="<%- require('images/index.jpg') %>">
+  </div>
+</div>
+
+<%- require('widgets/footer.html')() %>

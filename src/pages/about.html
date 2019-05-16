@@ -1,0 +1,19 @@
+<%-
+  require('widgets/header.html')({
+    title: '关于',
+    links: [
+      require('css/pages/about.styl')
+    ],
+    htmlWebpackPlugin: htmlWebpackPlugin
+  })
+%>
+
+<div class="container">
+  <%- require('widgets/nav.html')({ active: 1 }) %>
+  <div class="content">
+    <p class="about-title">关于</p>
+    <img src="<%- require('images/about.jpeg') %>">
+  </div>
+</div>
+
+<%- require('widgets/footer.html')() %>
