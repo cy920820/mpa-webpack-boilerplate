@@ -15,7 +15,9 @@ module.exports = mixins({
   devtool: 'source-map',
 
   entry: {
-    vendor: './vendor.js'
+    vendor: './vendor.js',
+    index: 'js/index.js',
+    about: 'js/about.js'
   },
 
   output: {

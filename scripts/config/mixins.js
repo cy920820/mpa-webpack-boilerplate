@@ -4,11 +4,13 @@ const config = require('../../src/config')
 const htmlPlugins = [
   {
     template: 'pages/index.html',
-    filename: 'index.html'
+    filename: 'index.html',
+    chunks: ['vendor', 'index']
   },
   {
     template: 'pages/about.html',
-    filename: 'about.html'
+    filename: 'about.html',
+    chunks: ['vendor', 'about']
   }
 ].map(options => {
   if (process.env.NODE_ENV === 'production') {
